@@ -2,8 +2,6 @@
 #include <stdio.h>
 #define size 20
 
-int arr[size], n, i, l, h ;
-
 void quickSort(int arr[], int l, int h)
 {
     int temp, key, low, high;
@@ -29,6 +27,7 @@ void quickSort(int arr[], int l, int h)
 
 int main()
 {
+    int arr[size], n, i;
     printf("Enter number of data: ");
     scanf("%d", &n);
 
@@ -36,9 +35,7 @@ int main()
     for(i=0; i<n; i++)
         scanf("%d", &arr[i]);
 
-    l = 0;
-    h = n-1;
-    quickSort(arr, l, h);
+    quickSort(arr, 0, n-1);
 
     printf("The data in sorted (ascending) form are: ");
     for(i=0; i<n; i++)
